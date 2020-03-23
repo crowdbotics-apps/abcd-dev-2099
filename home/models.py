@@ -8,28 +8,7 @@ from django.db import models
 
 class CustomText(models.Model):
     title = models.CharField(max_length=150,)
-    test = models.ForeignKey(
-        "home.CustomText",
-        null=True,
-        blank=True,
-        on_delete=models.CASCADE,
-        related_name="customtext_test",
-    )
-    user = models.ForeignKey(
-        "users.User",
-        null=True,
-        blank=True,
-        on_delete=models.CASCADE,
-        related_name="customtext_user",
-    )
-    hello = models.ForeignKey(
-        "home.CustomText",
-        null=True,
-        blank=True,
-        on_delete=models.CASCADE,
-        related_name="customtext_hello",
-    )
-    new = models.BigIntegerField(null=True, blank=True,)
+    name = models.BinaryField(null=True, blank=True,)
 
     def __str__(self):
         return self.title
@@ -53,3 +32,18 @@ class HomePage(models.Model):
     @property
     def field(self):
         return "body"
+
+
+class Testtt(models.Model):
+    "Generated Model"
+    testt = models.BinaryField()
+
+
+class Testing(models.Model):
+    "Generated Model"
+    test = models.BigIntegerField()
+
+
+class Test(models.Model):
+    "Generated Model"
+    test = models.BigIntegerField()
