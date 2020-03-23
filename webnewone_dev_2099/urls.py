@@ -33,9 +33,9 @@ urlpatterns = [
     path("home/", include("home.urls")),
 ]
 
-admin.site.site_header = "webnewone"
-admin.site.site_title = "webnewone Admin Portal"
-admin.site.index_title = "webnewone Admin"
+admin.site.site_header = "webnewonehhgdhdh"
+admin.site.site_title = "webnewonehhgdhdh Admin Portal"
+admin.site.index_title = "webnewonehhgdhdh Admin"
 
 # swagger
 schema_view = get_schema_view(
