@@ -23,6 +23,13 @@ class CustomText(models.Model):
         blank=True,
         related_name="customtext_emp",
     )
+    subpage = models.ForeignKey(
+        "home.CustomText",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="customtext_subpage",
+    )
 
     def __str__(self):
         return self.title
