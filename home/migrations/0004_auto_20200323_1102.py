@@ -6,50 +6,62 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('home', '0003_auto_20200323_0755'),
+        ("home", "0003_auto_20200323_0755"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Test',
+            name="Test",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('test', models.BigIntegerField()),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("test", models.BigIntegerField()),
             ],
         ),
         migrations.CreateModel(
-            name='Testing',
+            name="Testing",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('test', models.BigIntegerField()),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("test", models.BigIntegerField()),
             ],
         ),
         migrations.CreateModel(
-            name='Testtt',
+            name="Testtt",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('testt', models.BinaryField()),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("testt", models.BinaryField()),
             ],
         ),
-        migrations.RemoveField(
-            model_name='customtext',
-            name='hello',
-        ),
-        migrations.RemoveField(
-            model_name='customtext',
-            name='new',
-        ),
-        migrations.RemoveField(
-            model_name='customtext',
-            name='test',
-        ),
-        migrations.RemoveField(
-            model_name='customtext',
-            name='user',
-        ),
+        migrations.RemoveField(model_name="customtext", name="hello",),
+        migrations.RemoveField(model_name="customtext", name="new",),
+        migrations.RemoveField(model_name="customtext", name="test",),
+        migrations.RemoveField(model_name="customtext", name="user",),
         migrations.AddField(
-            model_name='customtext',
-            name='name',
+            model_name="customtext",
+            name="name",
             field=models.BinaryField(blank=True, null=True),
         ),
     ]
