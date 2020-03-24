@@ -11,24 +11,31 @@ class CustomText(models.Model):
     name = models.BinaryField(null=True, blank=True,)
     test = models.ForeignKey(
         "users.User",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="customtext_test",
     )
     emp = models.ForeignKey(
         "users.User",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="customtext_emp",
     )
     subpage = models.ForeignKey(
         "home.CustomText",
+        null=True,
+        blank=True,
+        on_delete=models.CASCADE,
+        related_name="customtext_subpage",
+    )
+    user = models.ForeignKey(
+        "users.User",
         on_delete=models.CASCADE,
         null=True,
         blank=True,
-        related_name="customtext_subpage",
+        related_name="customtext_user",
     )
 
     def __str__(self):
